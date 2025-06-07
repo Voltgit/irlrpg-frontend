@@ -1,12 +1,17 @@
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { TasksPage } from './pages/TasksPage';
+import './App.css';
 
-function App() {
+const App = () => {
+    return (
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<TasksPage />} />
+                </Routes>
+            </Router>
+        </>
+    );
+};
 
-  return (
-    <>
-      Work in progress...
-    </>
-  )
-}
-
-export default App
+export { App };
